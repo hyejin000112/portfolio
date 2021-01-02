@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace ="com.zerostress.review.mapper.ReviewMapper">
+	<insert id="reviewRegist">
+		insert into review(contentId,reviewId,title,content,evaluate) 
+		values(#{contentId},#{reviewId},#{title},#{content},#{evaluate})
+	</insert>
+	
+	<select id="reviewShow" resultType="ReviewVO">
+		select * from review
+	</select>
+	
+	<select id="modal_modify" resultType="ReviewVO">
+		select * from review where rno= #{rno}
+	</select>
+	
+	<insert id="review_modifyForm">
+		update review set title = #{title}, content = #{content} , evaluate = #{evaluate} where rno = #{rno}
+	</insert>
+	
+	<insert id="review_deleteForm">
+		delete from review where rno=#{rno}
+	</insert>
+	
+	<select id="review_view" resultType="ReviewVO">
+		<![CDATA[	
+		select * from 
+		(select @rownum:=@rownum+1 as rn, rno, contentId, reviewid, title, content, evaluate, regdate, updatedate from
+		(select * from review order by rno desc) A) B, (select @rownum:=0) as rn where rn > 0 and rn <= (select count(*) from review where contentId = #{contentId})
+		]]>
+	</select>
+</mapper>

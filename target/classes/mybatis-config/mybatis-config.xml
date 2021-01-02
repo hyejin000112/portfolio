@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  <typeAliases>
+		<typeAlias type="com.zerostress.command.UserInfoVO" alias="UserInfoVO"/>
+		<typeAlias type="com.zerostress.command.ReplyVO" alias="ReplyVO"/>
+		<typeAlias type="com.zerostress.command.RecommendVO" alias="RecommendVO"/>
+		<typeAlias type="com.zerostress.command.PersonalityVO" alias="PersonalityVO"/>
+		<typeAlias type="com.zerostress.command.MbtiVO" alias="MbtiVO"/>
+		<typeAlias type="com.zerostress.command.ReviewVO" alias="ReviewVO"/>
+		<typeAlias type="com.zerostress.command.KakaoInfoVO" alias="KakaoInfoVO"/>
+		<typeAlias type="com.zerostress.command.QnAVO" alias="QnAVO"/>
+	</typeAliases>
+  </configuration>
+

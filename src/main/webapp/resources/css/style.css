@@ -1,0 +1,92 @@
+
+/* 1:1 문의사항 */
+
+
+.list3_img_box {margin-top : 112px;}
+.list3_img_box img {width :100%}
+
+/*자게 시작*/
+.titlebox {
+   width: 250px;
+   text-align: center;
+   height: 40px;
+   line-height: 40px;
+   margin: 70px auto;
+   border-top: 1px solid #E1E1E1;
+   border-bottom: 1px solid #E1E1E1;
+}
+/*자게 그리드*/
+.board-table {
+   float: none; /*col의 플로팅 해제 */
+   margin: 0 auto;
+}
+/*---검색버튼--- */
+.search-wrap {
+   overflow: hidden; /*부모요소에 히든 */
+   margin-bottom: 20px;
+}
+
+.search-btn, .search-input, .search-select {
+   float: right; /*우측 플로팅 */
+}
+
+.search-input {
+   width: 140px;
+}
+
+.search-select {
+   width: 80px;
+}
+/*제목에 클래스를 줘서 강제로 크기 고정*/
+.board-title {
+   width: 300px;
+}
+/*th의 순차적 접근 색상변경 */
+.table-bordered>thead>tr>th {
+   background-color: #E7F2F9;
+   color: #003366;
+}
+/*테이블 안에 a태그에 순차적 접근 */
+.table-bordered>tbody>tr>td>a, .table-bordered>tbody>tr>td>a:hover {
+   color: black;
+}
+
+.pagination {
+   margin: 0; /*페이지 네이션의 기본 마진 0*/
+}
+
+.text-center .btn {
+   float: right; /*오른쪽으로 쌓아서 우측정렬 시킨다*/
+   border: 0; /*border스타일 해제*/
+   border-radius: 0; /*윤곽 0*/
+   padding: 5px 10px; /*버튼 패딩을 페이지네이션과 맞춘다*/
+}
+
+.board-list-location {padding: 10px 20px 0px 15px; margin: 10px auto 0 auto; width: auto;}
+
+.row_qna {
+	margin: 0 auto;
+}
+.qna-list-btn {
+   background-color : #517067;
+   border : 1px solid #517067;
+}
+
+.qna-list-btn:hover {
+   background-color : #517067;
+   border : 1px solid #517067;
+}
+
+.table-bordered>thead>tr>th {
+   background-color : rgb(200 202 183);
+}
+
+.pagination > .active > a {
+   background-color : #517067;
+   border-color : #517067;
+}
+
+.pagination > .active > a:hover {
+   background-color : #517067;
+   border-color : #517067;
+}

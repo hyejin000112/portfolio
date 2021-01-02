@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zerostress.qna.mapper.QnAMapper">
+
+	<insert id="getRegist">
+		insert into qna(writer,title,content)
+		values(#{writer},#{title},#{content})
+	</insert>
+
+	<select id="getList" resultType="QnAVO">
+	<![CDATA[
+		select *
+		from( 
+		     select @rownum:=@rownum+1 as rn,
+		           bno,
+		           title,
+		           writer,
+		           content,
+		           regdate,
+		           updatedate
+		     from (select *
+		           from qna
+		]]>        
+				     
+		           <if test="searchType=='title' ">where title like concat('%', #{searchName}, '%')</if>
+		           <if test="searchType=='writer' ">where writer like concat('%', #{searchName}, '%')</if>
+		           <if test="searchType=='content' ">where content like concat('%', #{searchName}, '%')</if>
+				   <if test="searchType=='titcont' ">where content like concat('%', #{searchName}, '%') or title like concat('%', #{searchName}, '%') </if>
+				   <if test="searchType=='' or searchType == null ">where 1 = 1</if>
+				   <!--  
+				   <choose>
+				   		<when test="searchType=='title' ">where title like '%'||#{searchName}||'%'</when>
+				   		<when test="searchType=='writer' ">where writer like '%'||#{searchName}||'%'</when>
+				   		<when test="searchType=='content' ">where content like '%'||#{searchName}||'%'</when>
+				   		<when test="searchType=='titcont' ">where content like '%'||#{searchName}||'%' or title like '%'||#{searchName}||'%' </when>
+				   		<otherwise>where 1=1</otherwise>
+				   </choose>
+				   -->
+				   	
+		<![CDATA[		           	
+		           order by bno desc) A
+		) B, (select @rownum:=0) as rn
+		where rn > (#{pageNum}-1) * #{amount} and rn <= #{pageNum} * #{amount}
+		]]>
+	</select>
+
+	<select id="getTotal" resultType="int">
+		select count(*) as total from qna
+		<if test="searchType=='title'">where title like '%'||#{searchName}||'%'</if>
+		<if test="searchType=='writer'">where writer like '%'||#{searchName}||'%'</if>
+		<if test="searchType=='content'">where content like '%'||#{searchName}||'%'</if>
+		<if test="searchType=='titcont'">where content like '%'||#{searchName}||'%' or title like
+			'%'||#{searchName}||'%'</if>
+		<if test="searchType=='' or searchType==null">where 1 = 1</if>
+	</select>
+
+	<select id="getContent" resultType="QnAVO">
+		select * from qna where
+		bno=#{bno}
+	</select>
+
+	<update id="getUpdate">
+		update qna set
+		writer=#{writer},title=#{title},content=#{content},updatedate=now()
+		where bno=#{bno}
+	</update>
+
+	<delete id="getDelete">
+		delete from qna where bno=#{bno}
+	</delete>
+</mapper>

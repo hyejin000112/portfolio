@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zerostress.userinfo.mapper.UserInfoMapper">
+
+
+<select id="idCheck" resultType="int">
+		select count(*) as total from userinfo where userId=#{userId}
+	</select>
+
+	<insert id="join">
+		insert into
+		userinfo(userId,userPw,userName,userEmail,userAddrZipNum,userAddrBasic,userAddrDetail,status)
+		values(#{userId},#{userPw},#{userName},#{userEmail},#{userAddrZipNum},#{userAddrBasic},#{userAddrDetail},'default')
+	</insert>
+
+	<select id="login" resultType="int">
+		select count(*) from userinfo where userId=#{userId} and userPw=#{userPw}
+	</select>
+
+	<select id="info" resultType="UserInfoVO">
+		select * from userinfo where userId=#{userId}
+	</select>
+
+	<update id="update">
+		update userinfo set userName=#{userName},userEmail=#{userEmail},userAddrZipNum=#{userAddrZipNum},
+		userAddrBasic=#{userAddrBasic},userAddrDetail=#{userAddrDetail} where userId=#{userId}
+	</update>
+	
+	<select id="userCheck" resultType="int">
+		select count(*) as total from userinfo where userId=#{userId}
+	</select>
+	
+	<update id="pwUpdate">
+		update userinfo set userPw=#{userPw} where userId=#{userId} and status='default'
+	</update>
+	
+	
+	<update id="pwFindUpdate">
+		update userinfo set userPw=#{password} where userEmail=#{email} and status='default'
+	</update>	
+	
+	<select id="pwCheck" resultType="int">
+		select count(*) as total from userinfo where userId=#{userId} and userPw=#{userPw}
+	</select>
+	
+	<select id="emailCheck" resultType="int">
+		select count(*)as total from userinfo where userEmail=#{userEmail}
+	</select>
+	
+	<delete id="delete">
+		delete from userinfo where userId=#{userId} and status='default'
+	</delete>
+		
+	<insert id="kakaoJoin">
+		insert into
+		userinfo(userId,userName,userEmail,status)
+		values(#{userId},#{userName},#{userEmail},'kakao')
+	</insert>
+	
+	<select id="kakaoRegist" resultType="int">
+		select count(*) as total from userinfo where userId=#{userId} and userName=#{userName} and userEmail=#{userEmail}
+	</select>
+
+	<select id="kakaoStatusCheck" resultType="int">
+		select count(*) as total from
+		userinfo where userId=#{userId} and status='kakao'
+	</select>
+	
+	<select id="userStatusCheck" resultType="int">
+		select count(*) as total
+		from userinfo where userId=#{userId} and userPw=#{userPw} and status='default'
+	</select>
+
+
+   <select id="personality" resultType="PersonalityVO">
+      select * from personality where pno=#{pno}
+   </select>
+   
+   <select id="mbtiForm" resultType="PersonalityVO">
+      select * from personality where pno=#{pno}
+   </select>
+   
+ <!--   <update id="mypageUpdate">
+      MERGE INTO MbtiVO
+         USING dual
+         ON (userId = #{userId})
+         WHEN MATCHED THEN
+            UPDATE
+               SET
+                  pno = #{pno},
+                  type = #{type},
+                  explain = #{explain},
+                  image1 = #{image1},
+                  image2 = #{image2},
+                  tour1 = #{tour1},
+                  tour2 = #{tour2},
+                  content1 = #{content1},
+                  content2 = #{content2},
+                  activity1 = #{activity1},
+                  activity2 = #{activity2}   
+         WHEN NOT MATCHED THEN
+            INSERT (userId, pno, type, explain1, image1, image2, tour1, tour2, content1, content2, activity1, activity2)
+            VALUES (#{userId},#{pno}, #{type}, #{explain}, #{image1}, #{image2}, #{tour1}, #{tour2}, #{content1}, #{content2}, #{activity1}, #{activity2})
+   </update>  -->
+   <insert id="mypageUpdate">
+   	INSERT INTO mbtivo (userId,pno,type,explain1,image1,image2,tour1,tour2,content1,content2,activity1,activity2)
+	VALUES (#{userId},#{pno}, #{type}, #{explain1}, #{image1}, #{image2}, #{tour1}, #{tour2}, #{content1}, #{content2}, #{activity1}, #{activity2})
+	ON DUPLICATE KEY 
+	UPDATE pno = #{pno}, type = #{type}, explain1 = #{explain1}, image1= #{image1}, image2=#{image2}, tour1= #{tour1}, tour2 = #{tour2}, content1 = #{content1}, content2 = #{content2}, activity1 = #{activity1}, activity2 = #{activity2};
+   </insert>
+   
+   <select id="mypageInfo" resultType="MbtiVO">
+      select * from mbtivo where userId=#{userId}
+   </select>
+   
+    <select id="certification" resultType="int">
+      select count(*) as total from userinfo where userId=#{userId} and EmailCheck=1;
+   </select>
+   
+    <select id="receiveMail" resultType="String">
+      select userEmail from userinfo where userId=#{userId};
+   </select>
+
+</mapper>

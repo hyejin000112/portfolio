@@ -1,0 +1,71 @@
+/* map_detail */
+.modal-googlemap {
+	position: relative;
+}
+
+.modal-list {
+	position: absolute;
+	border: 1px solid #333333;
+	width: 500px;
+	left: 120px;
+	top: 10px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.map-road-map {
+	position: absolute;
+	left: 30px;
+	top: 150px;
+	margin: 10px;
+}
+
+/* map_modal */
+.map-road-container {
+	margin-top: 150px
+}
+
+.map-road-img {
+	width: 100%;
+}
+
+.map-road-text {
+	position: relative;
+	margin: 40px 0
+}
+
+.map-road-text h1 {
+	position: absolute;
+	left: 10%;
+	bottom: 65%;
+}
+
+.map-road-text h3 {
+	position: absolute;
+	left: 10%;
+	bottom: 50%;
+}
+
+.map-road-text .map-road-button {
+	position: absolute;
+	left: 10%;
+	bottom: 35%;
+	width: 200px;
+	height: 50px;
+	background-color: rgb(116, 105, 88);
+	border-color: rgb(116, 105, 88);
+}
+
+.map-road-find {
+	margin: 50px 0;
+}
+
+.mbti_tour {
+	width: 80%;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	background-color: #e6e6e6;
+	padding: 30px;
+	border-radius: 15px;
+}

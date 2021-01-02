@@ -1,0 +1,281 @@
+
+
+/*혜진 마이페이지 시작*/
+.my_list {
+   margin: 30px;
+   overflow: hidden;
+   padding: 20px;
+}
+
+.mypage_user {
+   text-align: center;
+   margin-top: 10px;
+   height: 70px;
+}
+
+.mypage_user:hover {
+   border-bottom: 2px solid #aaa096;
+   cursor: pointer;
+}
+
+.mypage_user h3 {
+   font-weight: 600;
+}
+
+.mypage_user a {
+   text-decoration: none;
+   color: #555;
+   display: inline-block;
+}
+
+.myPage_tit {
+   color: #5a5c5d;
+   text-align: center;
+   padding-top: 30px;
+   padding-bottom: 15px;
+   display: block;
+   float: none;
+   border-bottom: 5px solid #c2d1cb;
+   /*border-left: 1px solid #c0dddc;*/
+}
+
+.mypage_dox {
+   background-color: rgb(255, 255, 255);
+}
+
+.mypage_date {
+   text-align: left;
+   margin-bottom: 5px;
+}
+
+.mypage_section {
+   margin-top: 129px;
+}
+
+.nav-tabs {
+   border: none;
+}
+
+.mypage_content {
+   margin: 30px;
+   text-align: center;
+}
+
+.mypage_content_inner {
+   background-color: rgb(80, 88, 73);
+}
+
+.mypage_mbti_tit_inner {
+   color: #fff;
+}
+
+.mypage_mbti_box {
+   position: relative;
+   overflow: hidden;
+}
+
+.mypage_mbti_tit, .mypage_mbti_content {
+   float: left;
+   padding: 15px;
+   color: #fff;
+}
+
+.mypage_mbti_content_inner {
+   display: none;
+   padding: 10px;
+   color: #fff;
+}
+
+.mypage_mbti_content, .character_content {
+   border-left: 1px solid #b3b3b3;
+   border-right: 1px solid #b3b3b3;
+}
+
+.character_content, .character_tit {
+   padding: 15px;
+   color: #fff;
+}
+
+.character_box {
+   background-color: rgb(80, 88, 73);
+   overflow: hidden;
+   padding: 0px;
+   border-top: 1px solid #b3b3b3;
+}
+
+.mypage_tour {
+   width: 80%;
+   overflow: hidden;
+   margin: 0 auto;
+   background-color: #e6e6e6;
+   padding: 30px;
+   border-radius: 15px;
+}
+
+.mypage_tour_box {
+   position: relative;
+}
+
+.mypage_tour h3 {
+   font-size: 22px;
+   font-weight: 700;
+}
+
+.my_tour_link {
+   color: #000;
+}
+
+.my_tour_link:hover {
+   color: #000;
+   text-decoration: none;
+}
+
+.my_tour_link img {
+   border-radius: 15px;
+   border: 1px solid #dddddd;
+}
+
+.mypage_tour_content {
+   border-bottom: 1px solid #b3b3b3;
+   background-color: #ffffff;
+   width: 80%;
+   margin: 0 auto;
+   padding: 15px;
+   transform: translate(0, -50%);
+   z-index: 15;
+   border-radius: 15px;
+   text-align: center;
+}
+
+.my_tour_tit {
+   font-weight: 700;
+   font-size: 20px;
+   display: block;
+}
+
+.mypage_tour_content:hover {
+   animation-name: tourAni;
+   animation-duration: 2s;
+   animation-fill-mode: both;
+}
+
+@
+keyframes tourAni { 100%{
+   transform: translate(0, -30%);
+}
+
+}
+
+/*자게 시작*/
+.titlebox {
+   width: 250px;
+   text-align: center;
+   height: 40px;
+   line-height: 40px;
+   margin: 70px auto;
+   border-top: 1px solid #E1E1E1;
+   border-bottom: 1px solid #E1E1E1;
+}
+/*자게 그리드*/
+.board-table {
+   float: none; /*col의 플로팅 해제 */
+   margin: 0 auto;
+}
+/*---검색버튼--- */
+.search-wrap {
+   overflow: hidden; /*부모요소에 히든 */
+   margin-bottom: 20px;
+}
+
+.search-btn, .search-input, .search-select {
+   float: right; /*우측 플로팅 */
+}
+
+.search-input {
+   width: 140px;
+}
+
+.search-select {
+   width: 80px;
+}
+/*제목에 클래스를 줘서 강제로 크기 고정*/
+.board-title {
+   width: 300px;
+}
+/*th의 순차적 접근 색상변경 */
+.table-bordered>thead>tr>th {
+   background-color: #E7F2F9;
+   color: #003366;
+}
+/*테이블 안에 a태그에 순차적 접근 */
+.table-bordered>tbody>tr>td>a, .table-bordered>tbody>tr>td>a:hover {
+   color: black;
+}
+
+.pagination {
+   margin: 0; /*페이지 네이션의 기본 마진 0*/
+}
+
+.text-center .btn {
+   float: right; /*오른쪽으로 쌓아서 우측정렬 시킨다*/
+   border: 0; /*border스타일 해제*/
+   border-radius: 0; /*윤곽 0*/
+   padding: 5px 10px; /*버튼 패딩을 페이지네이션과 맞춘다*/
+}
+
+/*혜진 마이페이지 마지막*/
+
+
+/*mbti*/
+.mbti_tit_box {
+   width: 60%;
+   margin: 0 auto;
+   margin-top: 60px;
+}
+
+.mbti {
+   background-color: #474747;
+   border-radius: 15px;
+   text-align: center;
+}
+
+.mbti_tit a {
+   text-decoration: none;
+   color: #fff;
+}
+
+.mbti_tit h2 {
+   margin: 20px;
+}
+
+.mbti_list_box {
+   padding: 15px;
+   text-align: center;
+   margin-top: 20px;
+}
+
+.mbti_list {
+   background-color: rgb(158, 172, 141);
+   margin: 0px 15px;
+}
+
+.mbti_list a {
+   color: #070707;
+   text-decoration: none;
+   padding: 13px;
+   display: inline-block;
+}
+
+.mbti_list a:hover {
+   color: #fff;
+}
+
+.mbti_list a .mbti_list_tit {
+   margin: 0;
+   font-size: 28px;
+}
+
+.mbti_list a .mbti_list_content {
+   margin: 0;
+   font-size: 15px;
+}

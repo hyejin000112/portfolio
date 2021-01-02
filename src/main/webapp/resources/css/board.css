@@ -1,0 +1,466 @@
+/* board_list */
+body {
+  margin-top: 112px;
+}
+
+.header {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0;
+}
+
+.board-list-location {padding: 10px 20px 0px 15px; margin: 10px auto 0 auto; width: auto;}
+.article-list-element {padding: 20px 0px 0px 0px;}
+
+.page_title {
+  margin : 20px 0;
+  height: 50px;
+  line-height: 50px;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  text-indent: 20px;
+}
+
+.search_block {
+  background-color: #e6e6e6;
+  border: 1px solid #ededed;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  height: auto;
+  overflow: hidden;
+}
+
+.search_block .fl {
+  float: left;
+  width: 100%;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+.search_th {
+  font-size: 20px;
+  margin: 0 10px
+}
+
+.tobacco {
+  margin: 20px 0;
+}
+
+.search_block .fr {
+  float: right;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+.purplebtn {
+  padding: 0px 25px;
+  color: #fff;
+  display: inline-block;
+  background-color: #7866c9;
+  border: 1px solid #7866c9;
+  height: 30px;
+  line-height: 30px;
+}
+
+.collum_tit h2 {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  line-height: 55px;
+  margin-left: 20px;
+}
+
+.full_collum {
+  margin: 20px 0;
+}
+
+.lighter {margin:0 auto;background-color: #e6e6e6; padding:30px;}
+.tobacco_lighter img {border-radius: 15px; width: 300px; height: 200px;}
+.tobacco_lighter_recommend {text-align: center;}
+.kimhyejin{overflow: hidden;}
+
+.paging {text-align: center; margin-top: 40px;}
+.pagingUl li {display: inline-block; padding : 10px 7px}
+.pagingUl .pagingLi a {font-size: 20px; color: black;}
+
+/* board_detail */
+.location-first {
+	margin: 0 30px
+}
+
+.mySlides {
+	display: none
+}
+
+.mySlides img {
+	vertical-align: middle;
+}
+
+.sub-contents {
+	margin-top: 112px;
+}
+
+.sub-contents .location {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.infor-element .text-type {
+	text-align: center;
+	color: #0066eb;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 3px;
+}
+
+.sub-contents .h3 {
+	font-size: 36px;
+	font-weight: 600;
+	color: #333;
+}
+
+.textcenter {
+	text-align: center !important;
+}
+
+.share-detial-element {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.post-element {
+	text-align: center;
+	position: relative;
+	padding: 30px 0;
+	margin: 0 auto;
+}
+
+/* 케러셀 좌우측 버튼 */
+.carousel-control.left {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, .0001) 100%);
+}
+
+.carousel-control.right {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%,
+		rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel-inner img {
+	margin: auto 0;
+	width: 40%;
+	padding: 30px 0px;
+}
+
+.text-area {
+	text-align: center;
+	float: none;
+	margin: 0 auto;
+	font-size: 16px;
+	margin: 0 20px
+}
+
+.detial-cont-element {
+	float: none;
+	margin: 0 auto;
+	padding: 30px 0px;
+}
+
+.detail-map-infor dl {
+	position: relative;
+	padding: 10px 0px 10px 200px;
+	text-align: left;
+}
+
+.detail-map-infor dt {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 1;
+	width: 200px;
+	font-size: 18px;
+	color: #222;
+	font-weight: 700;
+}
+
+.detail-map-infor dd {
+	text-align: left;
+}
+
+.detail-map-wrap {
+	float: none;
+	margin: 0 auto;
+	padding: 30px 0px;
+}
+
+.detail-map-wrap .see-map {
+	display: block;
+	color: #0066eb;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.tripadvisor-wrap {
+	float: none;
+	margin: 0 auto;
+}
+
+.tripadvisor-wrap h4 {
+	font-size: 45px;
+	color: #333;
+	font-weight: 700;
+	margin: 30px 0px;
+}
+
+.tripadvisor-wrap .trip-infor {
+	font-size: 18px;
+	color: #333333;
+	margin-top: 10px;
+	font-weight: 700;
+}
+
+.tripadvisor-wrap .trip-lst-wrap {
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+.tripadvisor-wrap .trip-lst-total {
+	margin: 0 0 10px;
+}
+
+.tripadvisor-wrap .trip-lst-wrap {
+	margin: 15px 0px 0px 0px;
+}
+
+.tripadvisor-wrap .trip-lst-wrap .inner, dd {
+	text-align: center;
+	margin: 0 10px;
+}
+
+.tripadvisor-wrap .trip-lst-wrap .inner {
+	border: 1px solid #333333;
+	border-radius: 5px;
+	float: left;
+	width: 48%;
+	margin: 10px;
+	box-sizing: border-box;
+}
+
+.sptitle4 {
+	display: inline;
+	padding: 0 10px;
+}
+
+.tripadvisor-wrap .trip-lst-wrap .loading {
+	height: 170px;
+	line-height: 170px;
+	font-size: 20px;
+}
+
+.detail-button {
+	display: inline-block;
+	line-height: 37px;
+	height: 40px;
+	border-radius: 4px;
+	border: solid 2px #ddd;
+	font-size: 16px;
+	color: #333;
+	font-weight: 700;
+	padding: 0px 20px;
+	box-sizing: border-box;
+	background-color: #fff;
+	margin: 50px 10px;
+}
+
+.detail-button:hover {
+	color: #fff;
+	background-color: #0066eb;
+	border: solid 2px #0066eb;
+}
+
+.wf-content {
+	width: 70%;
+	height: 50px;
+	min-height: 50px;
+	padding: 12px 8px;
+	font-size: 14px;
+	line-height: 24px;
+	outline: none;
+	background: transparent;
+	color: #444444;
+	float: none;
+	margin: 0 auto;
+	resize: vertical;
+	border: 1px solid #333333;
+}
+
+.wf-content-wrapper label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.i-photo-b {
+	width: 70%;
+	float: none;
+	margin: 0 auto;
+}
+
+.guest-write-btn {
+	position: relative;
+	left: 2px;
+	width: 70px;
+	height: 36px;
+	padding: 8px 15px;
+	text-align: center;
+	color: #fff;
+	background: #D60036;
+	vertical-align: middle;
+	float: right;
+}
+
+@media ( max-width : 767px) {
+	.tripadvisor-wrap .trip-lst-wrap .inner {
+		width: 95%;
+	}
+	.detail-map-infor dl {
+		padding: 1px 2px 10px 110px;
+	}
+	.tripadvisor-wrap h4 {
+		font-size: 30px;
+	}
+}
+		
+		
+/*board수정*/
+.board_dd{
+	height:100px;
+	padding:5px;
+
+}
+.board_dt{
+	padding:5px;
+}
+
+.text{
+	color:#000;
+	font-weight:700;
+}
+
+
+#review_table{
+	overflow:hidden;
+}
+
+
+.tripadvisor-wrap .trip-lst-wrap .inner{
+	border:1px solid #a9abbf;
+	height:170px;
+}
+
+.tripadvisor-wrap .trip-lst-wrap .loading{
+	line-height: 170px;
+}
+
+.detail-button:hover{
+	background-color:#3d3b46;
+	border:solid 2px #000000;
+	text-decoration:none;
+}
+
+
+/* board-modal */
+.project-board-table {
+	padding: 0;
+	margin: 0 auto;
+	width: 100%
+}
+
+.project-board-table-td {
+	text-align: left
+}
+
+.project-board-table-td2 {
+	padding-top: 10px;
+	text-align: center
+}
+
+.project-board-table-td3 {
+	width: 100%;
+	text-align: center;
+}
+
+.project-board-table-td4 {
+	width: 33%;
+	text-align: center;
+	margin-top: 24px;
+	padding-top: 12px;
+	border-top: 1px solid #ececec
+}
+
+.project-board-table-textarea {
+	margin-bottom: 10px;
+	resize: vertical
+}
+
+.project-board-table-input {
+	ime-mode: inactive;
+	margin-bottom: 25px;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #d9d9de;
+}
+
+.project-board-table-button1 {
+	background-color: rgb(81, 112, 103);
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 10px;
+	height: 40px;
+	color: white;
+	border: 0px solid #388E3C;
+	opacity: 0.8;
+	border-radius: 5px;
+}
+
+.project-board-table-button2 {
+	background-color: rgb(119, 119, 119);
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 10px;
+	height: 40px;
+	color: white;
+	border: 0px solid #388E3C;
+	opacity: 0.8;
+	border-radius: 5px;
+}
+
+.project-board-table-button3 {
+	background-color: red;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 10px;
+	height: 40px;
+	color: white;
+	border: 0px solid #388E3C;
+	opacity: 0.8;
+	border-radius: 5px;
+}
+
+.project-board-table-td1 input {
+	-webkit-appearance: radio;
+	margin: 10px 5px 0 0;
+}
+
+.project-board-table-td1 label {
+	margin: 0 20px 20px 0;
+}
+.list3_img_box {margin-top : 112px;}
+.list3_img_box img {width :100%}

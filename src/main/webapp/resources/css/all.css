@@ -1,0 +1,55 @@
+ /* 디자인시작하기전에 웹폰트와 초기화 선언 */
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+   /* 전체 적용 */
+   * {padding: 0; margin: 0; box-sizing: border-box;}
+   body, html {width: 100%; min-width: 320px; font-family: 'Noto Sans KR', sans-serif; /*웹폰트 사용*/}
+   img {max-width: 100%; /*사이즈가 변해도 넓이를 유지 */ height: auto; /*사이즈가 변해도 높이를 유지 */ /*vertical-align: top;*/}
+   input, textarea, button {-webkit-appearance: none; -moz-appearance: none; appearance: none;border: none} /* 고유하게 적용되어있는 form관련 요소들을 제거해서 여러브라우저에서 동일한디자인을 얻게함  */
+   ul, ol, dl, li {list-style: none /*순서 요소들이 리스트스타일을 업앤다 */}
+ 
+     /* header */
+     header {position: fixed; top:0; left:0; z-index: 15; width: 100%; border-radius: 0px; background-color:#f1f1f1; box-shadow: 1px 1px 5px 1px #565a6d;}
+     header h1 {text-align: center; margin: 10px; color: #555555;}
+     .header-span {color : #555555}
+     .logo-box {position: relative;}
+     .logo-box .login-register {position: absolute; top: -60px; right: 50px; margin: 15px; cursor: pointer;}
+     .logo-box .login-register p {margin: 15px; color: #555555; display: inline;}
+     .logo-box .login-register p a {color: #555555;display: inline;text-decoration: none;font-size: 14px;}
+     header .navbox {display: block; margin: 0px; padding: 0px; text-align: center;}
+     header .navbar-inverse {background-image: none; background-color: rgb(200 202 183); border-color: white; z-index: -5;}
+     header .navbox .dropdownbtn {display: inline-block; color: #555; padding: 14px 20px; margin: 0px 10px; transition: border 0.4s;}
+     header .navbox .dropdownbtn:hover {border-bottom: 2px solid #555;}
+     header .navbox p:hover{text-decoration: none;}
+     header .navbox .dropdown-menu {background-color: #fff; color: #555555;}
+     .navbar{margin-bottom: 0; border:none;}   
+     .logo_a{color:#758b37;  font-family: 'Balsamiq Sans', cursive; font-size:30px;}
+     .logo_a:hover{text-decoration: none;}
+     .header_nav .navbox-li{cursor: pointer; }
+     .header_nav .dropdown p{color:#000; font-family: 'Nanum Gothic', sans-serif;} 
+     .header_logo_box .login-register{position: absolute; top: -55px; right: 5px; margin: 15px; font-size: 16px;} 
+     .dropdown {position: relative; display: inline-block; }
+     .dropdown-content {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+     .dropdown:hover .dropdown-content {display: block;}
+	 .navbar-collapse {border-color : none}
+/* footer */
+footer {margin-top: 70px; background-color: #f1f1f1; padding: 30px 0;}
+footer .copyright {font-size: 13px; line-height: 20px; color: #2f2f2f;}
+.footer .copyright img {border-radius: 5px;}
+footer .copyright address {margin-bottom: 0;}
+footer .footer-menu li {display: inline-block; padding: 0 10px;}
+footer .footer-menu li a {display: block; color: #2f2f2f; font-size: 13px;}
+
+@media ( max-width : 767px) {header h1 {margin: 10px;font-size: 20px;}
+header .navbox {text-align: left;}
+header .navbox li {display: block;	padding: 5px 0px;}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{background-color: unset;}
+.quick_area {display: none;}
+.main {position: relative;margin-bottom: 50px;text-align: center;}
+.main .main_text {display: none;}
+.logo-box {	position: relative;}
+.logo-box .login-register {position: absolute;top: -45px;right: 10px;}
+.logo-box .login-register a {margin: 5px;color: #777;font-size: 10px;}

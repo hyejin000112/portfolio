@@ -1,0 +1,123 @@
+/* weather_detail */
+.weather-city-name {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.weather-time {
+	display: inline-block;
+}
+
+.weather_container {
+	max-width: 100%;
+	width: auto; 
+	display: table;
+}
+
+.location_weather {
+	padding: 0;
+	margin-top: 20px;
+}
+
+.weather_table_detail {
+	margin-top: 30px;
+	margin-bottom: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+.weather_table_detail th {
+	width: 10%;
+}
+
+.weather_table_detail th, .weather_table_detail td {
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #D8D8D8;
+}
+
+.weather-temp-div {
+	overflow: hidden;
+}
+
+.weather-temp-img {
+	margin: 20px 20px 20px 0;
+}
+
+.weather-temp-img, .weather-temp {
+	float: left;
+}
+
+.weather-wind-div, .weather-humidity-div {
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+	margin: 20px 0;
+	overflow: hidden;
+}
+
+.weather-wind-div p, .weather-humidity-div p {
+	float: left;
+	margin-right: 20px;
+}
+
+.weather-temp-table {
+	padding: 20px 0px;
+}
+
+
+
+/* weather*/
+.weather_img_box {margin-top : 112px;}
+.weather_img_box img {width : 100%; height : auto}
+
+.img_box {
+	padding-top: 5%;
+}
+
+.location{
+ padding-top:40px;
+ font-size:15px;
+}
+
+.tit_weather{
+ color:#777;
+ border-bottom:3px solid  #B2CC99;
+ padding:15px;
+ margin-top:30px;
+}
+
+.weather_table_hyejin{
+    margin:0 auto;
+ margin-top:30px;
+ margin-bottom:100px;
+ width:80%;
+ text-align: center;
+
+
+}
+.weather_table_hyejin th,.weather_table_hyejin td{
+line-height: 50px;
+text-align: center;
+border:1px solid #D8D8D8;
+}
+
+#weather_list{
+    padding:3px;
+    width:100px;
+    float:right;
+     border: 1px solid #575656;
+
+}
+.weather_table_hyejin td{
+    width:60%;
+}
+.weather_go{
+    float: right;
+}
+
+.sptitle_span {
+	float : right;
+	font-size : 15px;
+	margin : 0px 20px 30px 0px;
+}

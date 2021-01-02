@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
+   xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+   <bean id="userInterceptor" class="com.zerostress.util.interceptor.UserInterceptor"/>
+   <bean id="boardInterceptor" class="com.zerostress.util.interceptor.BoardInterceptor"/>
+   <bean id="EmailInterceptor" class="com.zerostress.util.interceptor.EmailInterceptor"/>
+   
+    <mvc:interceptors>
+      <mvc:interceptor>
+         <mvc:mapping path="/users/user_mypage"/>
+         <mvc:mapping path="/board/board_list"/>
+         <mvc:mapping path="/board/board_detail"/>
+         <mvc:mapping path="/activity/activity"/>
+         <mvc:mapping path="/qna/qna_list"/>
+         <ref bean="userInterceptor"/>
+      </mvc:interceptor>
+      
+       <mvc:interceptor>
+         <mvc:mapping path="/board/board_list"/>
+ 		 <mvc:mapping path="/weather/weather"/>
+         <mvc:mapping path="/activity/activity"/>
+         <mvc:mapping path="/qna/qna_list"/>
+      	 <mvc:mapping path="/mbti/mbti_result"/>
+      	 <mvc:mapping path="/intro/faq"/>
+         <ref bean ="EmailInterceptor"/>
+      </mvc:interceptor>
+      
+      <mvc:interceptor>
+      	 <mvc:mapping path="/qna/qna_modify"/>
+         <ref bean ="boardInterceptor"/>
+      </mvc:interceptor>
+   </mvc:interceptors>
+</beans>

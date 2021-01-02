@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.zerostress.reply.mapper.ReplyMapper">
+  
+  	<insert id="replyRegist">
+		insert into replyqna(bno, reply, replyId, replyPw)
+		values(#{bno}, #{reply}, #{replyId}, #{replyPw})
+	</insert>
+	
+	<select id="getList" resultType="ReplyVO">
+		<![CDATA[
+		select *
+		from(
+			select @rownum:=@rownum+1 as rn,
+				   	rno,
+				   	bno,
+					reply,
+					replyId,
+					replyPw,
+					replyDate,
+					updateDate
+			from(
+				select *
+				from replyqna
+				where bno = #{bno}
+				order by rno desc
+				) A
+		) B , (select @rownum:=0) as rn
+		where rn > (#{cri.pageNum} -1) * #{cri.amount} and rn <= #{cri.pageNum} * #{cri.amount}
+		]]>
+	</select>
+	
+		<select id="getTotal" resultType="int">
+		select count(*) as total from replyqna where bno = #{bno}
+	</select>
+	
+	<select id="pwCheck" resultType="int">
+		select count(*) as result from replyqna
+		where rno = #{rno} and replyPw = #{replyPw}
+	</select>
+
+	<update id="update">
+		update replyqna set reply = #{reply}, updateDate = now() where rno = #{rno}
+	</update>
+
+	<delete id="delete">
+		delete from replyqna where rno = #{rno}
+	</delete>
+  </mapper>

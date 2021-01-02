@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace ="com.zerostress.email.mapper.EmailMapper">
+
+ <insert id="mailStorage">
+   	INSERT INTO emailCertified (receiveMail, certiCheck, message)
+	VALUES (#{receiveMail},#{certiCheck}, #{message})
+	ON DUPLICATE KEY 
+	UPDATE certiCheck = #{certiCheck}, message = #{message}
+ </insert>
+ 
+<update id="mailModi">
+   
+   update emailCertified set certiCheck = 1 where receiveMail = #{receiveMail}
+</update>
+
+<select id ="mailCheck"  resultType = "Integer">
+	<!-- select certiCheck from emailCertified where 
+	receiveMail = '123' and message = '13232' -->
+	
+	select count(*)
+	from emailCertified
+	where receiveMail = #{receiveMail} and message = #{message}
+
+</select>
+
+<update id="userEmailCertified">
+	update userinfo set EmailCheck = 1 where userEmail = #{receiveMail}
+</update>
+
+ </mapper>
